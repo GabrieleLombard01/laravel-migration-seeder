@@ -50,18 +50,20 @@ class TrainSeeder extends Seeder
             ],
         ];
 
-        $new_train = new Train();
+        foreach ($trains as $train) {
+            $new_train = new Train();
 
-        $new_train->agency = 'Trenitalia';
-        $new_train->departure_station = 'Chivasso';
-        $new_train->arrival_station = 'Torino';
-        $new_train->departure_time = "19:30:10";
-        $new_train->arrival_time = "19:50:10";
-        $new_train->train_code = 03;
-        $new_train->number_coaches = 7;
-        $new_train->in_time = true;
-        $new_train->deleted = false;
+            $new_train->agency = $train['agency'];
+            $new_train->departure_station = $train['departure_station'];
+            $new_train->arrival_station = $train['arrival_station'];
+            $new_train->departure_time = $train['departure_time'];
+            $new_train->arrival_time = $train['arrival_time'];
+            $new_train->train_code = $train['train_code'];
+            $new_train->number_coaches = $train['number_coaches'];
+            $new_train->in_time = $train['in_time'];
+            $new_train->deleted = $train['deleted'];
 
-        $new_train->save();
+            $new_train->save();
+        }
     }
 }
