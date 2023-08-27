@@ -13,6 +13,43 @@ class TrainSeeder extends Seeder
      */
     public function run(): void
     {
+
+        $trains = [
+            [
+                'agency' => 'Trenitalia',
+                'departure_station' => 'Chivasso',
+                'arrival_station' => 'Torino',
+                'departure_time' => "19:30:10",
+                'arrival_time' => "19:50:10",
+                'train_code' => 06,
+                'number_coaches' => 7,
+                'in_time' => true,
+                'deleted' => false,
+            ],
+            [
+                'agency' => 'Trenitalia',
+                'departure_station' => 'Crescentino',
+                'arrival_station' => 'Chivasso',
+                'departure_time' => "09:30:10",
+                'arrival_time' => "09:45:10",
+                'train_code' => 43,
+                'number_coaches' => 5,
+                'in_time' => false,
+                'deleted' => true,
+            ],
+            [
+                'agency' => 'Frecciarossa',
+                'departure_station' => 'Torino',
+                'arrival_station' => 'Milano',
+                'departure_time' => "20:30:10",
+                'arrival_time' => "21:15:10",
+                'train_code' => 04,
+                'number_coaches' => 7,
+                'in_time' => true,
+                'deleted' => false,
+            ],
+        ];
+
         $new_train = new Train();
 
         $new_train->agency = 'Trenitalia';
