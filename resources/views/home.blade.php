@@ -4,6 +4,6 @@
 
 @section('main')
     <div class="container">
-        <h1 class="text-center mt-3">Hello world!</h1>
+        <h1 class="text-center mt-3">{{ $train->agency }}</h1>
     </div>
 @endsection
